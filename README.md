@@ -20,6 +20,8 @@ In addition, this project will include:
 
 ## Wireframes
 
+![wireframe](./wireframe.png)
+
 
 ## Technologies, Libraries, APIs
 
