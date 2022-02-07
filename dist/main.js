@@ -15,7 +15,7 @@
   \**********************/
 /***/ (function() {
 
-eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  console.log(\"Piano Man\");\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9waWFub19wbGF5ZXIvLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6WyJkb2N1bWVudCIsImFkZEV2ZW50TGlzdGVuZXIiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiQUFBQUEsUUFBUSxDQUFDQyxnQkFBVCxDQUEwQixrQkFBMUIsRUFBOEMsWUFBTTtBQUNoREMsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksV0FBWjtBQUNELENBRkgiLCJzb3VyY2VzQ29udGVudCI6WyJkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKFwiRE9NQ29udGVudExvYWRlZFwiLCAoKSA9PiB7XG4gICAgY29uc29sZS5sb2coXCJQaWFubyBNYW5cIik7XG4gIH0pO1xuICAiXSwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/sean/javascript_project/piano_player/src/index.js: Unexpected token, expected \",\" (66:6)\n\n\u001b[0m \u001b[90m 64 |\u001b[39m \u001b[90m// piano.addEventListener(\"clickup\", e => {\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 65 |\u001b[39m \u001b[90m//   synth.triggerRelease;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m \u001b[90m// });\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Parser._raise (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:476:17)\n    at Parser.raiseWithData (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:469:17)\n    at Parser.raise (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:430:17)\n    at Parser.unexpected (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:3789:16)\n    at Parser.expect (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:3773:28)\n    at Parser.parseCallExpressionArguments (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:12356:14)\n    at Parser.parseCoverCallAndAsyncArrowHead (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:12272:29)\n    at Parser.parseSubscript (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:12197:19)\n    at Parser.parseSubscripts (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:12166:19)\n    at Parser.parseExprSubscripts (/home/sean/javascript_project/piano_player/node_modules/@babel/parser/lib/index.js:12155:17)");
 
 /***/ }),
 
@@ -51,7 +51,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
 /******/ 	__webpack_modules__["./src/index.js"](0, {}, __webpack_require__);
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/index.scss"](0, __webpack_exports__, __webpack_require__);
