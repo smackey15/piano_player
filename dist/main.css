@@ -46,3 +46,7 @@ div {
   justify-content: center;
   align-items: flex-end;
 }
+
+.key:hover {
+  background-color: gray;
+}

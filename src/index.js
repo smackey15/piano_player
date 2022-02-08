@@ -1,22 +1,33 @@
 import * as Tone from 'tone'
 
 const synth = new Tone.Synth();
-synth.oscillator.type = "sine";
+synth.oscillator.type = "triangle";
 synth.toDestination();  //toMaster deprecated
 
 document.addEventListener("DOMContentLoaded", () => {
-  const keys = document.querySelectorAll(".key")
-  keys.forEach(key => {
-    key.addEventListener("click", () => playNote(key))
-  })  
-}); //create function here and pass keys in?
+  let piano = document.getElementById("piano");
 
-function playNote(key) {
-  const note = document.getElementById(key.dataset.note)
-  synth.triggerAttackRelease(`${note}`, "8n");
-  // Tone.start();
-}
+  piano.addEventListener("mousedown", e => {
+  synth.triggerAttack(e.target.dataset.note);
+});
+  piano.addEventListener("mouseup", e => {
+  synth.triggerRelease();
+});
+}); 
+//create function here and pass keys in?
+// document.addEventListener("DOMContentLoaded", () => {
+//   const keys = document.querySelectorAll(".key")
+//   keys.forEach(key => {
+//     key.addEventListener("click", () => playNote(key))
+//   });  
 
+// function playNote(key) {
+//   console.log(key);
+//   const note = document.getElementById(key.dataset.note)
+//   synth.triggerAttackRelease(`${note}`, "8n");
+//   // Tone.start();
+// }
+// }); //create function here and pass keys in?
 // window.synth = synth;
 
 
@@ -42,19 +53,13 @@ function playNote(key) {
 document.addEventListener("DOMContentLoaded", () => {
     let g = "Piano Man"
     console.log(g);
-//     const keys = document.querySelectorAll(".key")
-//   console.log(keys);
-  }); //create function here and pass keys in?
+  }); 
 
-// const synth = new Tone.Synth();
-// synth.oscillator.type = "sine";
-// synth.toDestination();  //toMaster deprecated
 
 // const piano = document.getElementById("piano");
 
 // piano.addEventListener("clickdown", e => {
 //   synth.triggerAttack(e.target.dataset.note);
-// synth.triggerAttack("C4", "8n");
 // });
 
 // piano.addEventListener("clickup", e => {
