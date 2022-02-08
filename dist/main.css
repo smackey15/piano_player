@@ -50,3 +50,7 @@ div {
 .key:hover {
   background-color: gray;
 }
+
+.key.pressed {
+  background-color: gray;
+}
