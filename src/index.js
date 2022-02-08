@@ -13,16 +13,30 @@ document.addEventListener("DOMContentLoaded", () => {
   piano.addEventListener("mouseup", e => {
   synth.triggerRelease();
 });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "a") {
+      synth.triggerAttack("A3")
+    }
+  });
+
+  document.addEventListener("keyup", e => {
+    if (e.key === "a") {
+      synth.triggerRelease();
+    }
+  });
+
 }); 
+
+
 //create function here and pass keys in?
 // document.addEventListener("DOMContentLoaded", () => {
 //   const keys = document.querySelectorAll(".key")
 //   keys.forEach(key => {
-//     key.addEventListener("click", () => playNote(key))
+//     key.addEventListener("mousedown", () => playNote(key))
 //   });  
 
 // function playNote(key) {
-//   console.log(key);
 //   const note = document.getElementById(key.dataset.note)
 //   synth.triggerAttackRelease(`${note}`, "8n");
 //   // Tone.start();
