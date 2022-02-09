@@ -2,9 +2,20 @@ import * as Tone from 'tone'
 
 const synth = new Tone.Synth();
 synth.oscillator.type = "triangle";
-synth.toDestination();  //toMaster deprecated
+synth.toDestination(); 
 
 document.addEventListener("DOMContentLoaded", () => {
+  let modal = document.getElementById("myModal");
+  
+  let span = document.getElementsByClassName("close")[0];
+  
+  modal.style.display = "block"
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+
   let piano = document.getElementById("piano");
 
   piano.addEventListener("mousedown", e => {

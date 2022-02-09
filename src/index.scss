@@ -2,6 +2,22 @@ body {
     background-color: black;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    zoom: 3.5;
+}
+
+.modal {
+    width: 60%;
+    height: 60%;
+}
+
+.modal-content {
+    color: blueviolet;
+    font-size: 8px;
+    border: 1px solid ivory;
+}
+
+span:hover {
+    background-color: ivory;
 }
 
 h1 {
@@ -48,8 +64,26 @@ div {
     background-color: gray;
 }
 
-.key.pressed {
-    background-color: gray;
-}
+// .key.pressed {
+//     background-color: gray;
+// }
 // doesn't work yet 
+
+.slide-container {
+//     height: 20px;
+//     width: 40px;
+        color: ivory;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+//     display: flex;
+    zoom: -3;
+//     // justify-content:right;
+//     // position: relative;
+//     // align-items: flex-start;
+// }
+
+// .links {
+// zoom: 0;
+}
+
 
