@@ -67,23 +67,42 @@ div {
 // .key.pressed {
 //     background-color: gray;
 // }
-// doesn't work yet 
+// need to implement
 
 .slide-container {
-//     height: 20px;
-//     width: 40px;
-        color: ivory;
+    color: blueviolet;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 8px;
-//     display: flex;
-    zoom: -3;
-//     // justify-content:right;
-//     // position: relative;
-//     // align-items: flex-start;
-// }
-
-// .links {
-// zoom: 0;
+    display: flex;
+    justify-content: center;
 }
 
+input {
+    zoom: .4;
+}
+
+.slider {
+    appearance: none;
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;  
+    background: gray;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: blueviolet;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: blueviolet;
+  }
+
+  
 

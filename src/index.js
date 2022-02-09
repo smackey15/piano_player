@@ -1,10 +1,12 @@
 import * as Tone from 'tone'
 
+// Instantiate new synth object, set oscillator type, send output to computer speakers 
 const synth = new Tone.Synth();
 synth.oscillator.type = "triangle";
 synth.toDestination(); 
 
 document.addEventListener("DOMContentLoaded", () => {
+  // modal fucntionality
   let modal = document.getElementById("myModal");
   
   let span = document.getElementsByClassName("close")[0];
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
   }
 
-
+  // play piano with mouse
   let piano = document.getElementById("piano");
 
   piano.addEventListener("mousedown", e => {
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   synth.triggerRelease();
 });
 
+  // play piano with computer keyboard
   document.addEventListener("keydown", e => {
     if (e.repeat) return;
 
@@ -60,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (e.key === ";") synth.triggerAttack("C5")
 
-    // e.key.classList.add("pressed"); doesn't work yet.
+    // e.key.classList.add("pressed"); need to implement 
+    // piano keys turn gray when played with computer keyboard
   });
 
   document.addEventListener("keyup", e => {
