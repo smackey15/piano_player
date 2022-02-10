@@ -33,37 +33,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (e.repeat) return;
 
-    if (e.key === "a") synth.triggerAttack("A3")
+    if (e.key.toLowerCase() === "a") synth.triggerAttack("A3")
   
-    if (e.key === "w") synth.triggerAttack("A#3")
+    if (e.key.toLowerCase() === "w") synth.triggerAttack("A#3")
   
-    if (e.key === "s") synth.triggerAttack("B3")
+    if (e.key.toLowerCase() === "s") synth.triggerAttack("B3")
     
-    if (e.key === "d") synth.triggerAttack("C4")
+    if (e.key.toLowerCase() === "d") synth.triggerAttack("C4")
     
-    if (e.key === "r") synth.triggerAttack("C#4")
+    if (e.key.toLowerCase() === "r") synth.triggerAttack("C#4")
     
-    if (e.key === "f") synth.triggerAttack("D4")
+    if (e.key.toLowerCase() === "f") synth.triggerAttack("D4")
     
-    if (e.key === "t") synth.triggerAttack("D#4")
+    if (e.key.toLowerCase() === "t") synth.triggerAttack("D#4")
     
-    if (e.key === "g") synth.triggerAttack("E4")
+    if (e.key.toLowerCase() === "g") synth.triggerAttack("E4")
     
-    if (e.key === "h") synth.triggerAttack("F4")
+    if (e.key.toLowerCase() === "h") synth.triggerAttack("F4")
     
-    if (e.key === "u") synth.triggerAttack("F#4")
+    if (e.key.toLowerCase() === "u") synth.triggerAttack("F#4")
     
-    if (e.key === "j") synth.triggerAttack("G4")
+    if (e.key.toLowerCase() === "j") synth.triggerAttack("G4")
     
-    if (e.key === "i") synth.triggerAttack("G#4")
+    if (e.key.toLowerCase() === "i") synth.triggerAttack("G#4")
     
-    if (e.key === "k") synth.triggerAttack("A4")
+    if (e.key.toLowerCase() === "k") synth.triggerAttack("A4")
     
-    if (e.key === "o") synth.triggerAttack("A#4")
+    if (e.key.toLowerCase() === "o") synth.triggerAttack("A#4")
     
-    if (e.key === "l") synth.triggerAttack("B4")
+    if (e.key.toLowerCase() === "l") synth.triggerAttack("B4")
     
-    if (e.key === ";") synth.triggerAttack("C5")
+    if (e.key.toLowerCase() === ";") synth.triggerAttack("C5")
 
     // key.classList.add("active"); //need to implement 
     // e.key.style.display = "active"; //need to implement 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keyup", e => {
     let keys = ["a", "w", "s", "d", "r", "f", "t", "g", "h", "u", "j", "i", "k", "o", "l", ";"]
-    if (keys.includes(e.key)) synth.triggerRelease();
+    if (keys.includes(e.key.toLowerCase())) synth.triggerRelease();
   });
 
 }); 
