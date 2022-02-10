@@ -1,3 +1,4 @@
+// Import Tone.js library
 import * as Tone from 'tone'
 
 // Instantiate new synth object, set oscillator type, send output to computer speakers 
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // play piano with computer keyboard
   document.addEventListener("keydown", e => {
+
     if (e.repeat) return;
 
     if (e.key === "a") synth.triggerAttack("A3")
@@ -63,7 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (e.key === ";") synth.triggerAttack("C5")
 
-    // e.key.classList.add("pressed"); need to implement 
+    // key.classList.add("active"); //need to implement 
+    // e.key.style.display = "active"; //need to implement 
     // piano keys turn gray when played with computer keyboard
   });
 
@@ -74,54 +77,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }); 
 
-
-//create function here and pass keys in?
-// document.addEventListener("DOMContentLoaded", () => {
-//   const keys = document.querySelectorAll(".key")
-//   keys.forEach(key => {
-//     key.addEventListener("mousedown", () => playNote(key))
-//   });  
-
-// function playNote(key) {
-//   const note = document.getElementById(key.dataset.note)
-//   synth.triggerAttackRelease(`${note}`, "8n");
-//   // Tone.start();
-// }
-// }); //create function here and pass keys in?
-// window.synth = synth;
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.querySelector('.key')?.addEventListener('click', playSound
-// )}
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   let g = "Piano Man"
-//   console.log(g);
-// });
-
-
-// import "./styles/index.scss"
-
-// const { Tone } = require("tone/build/esm/core/Tone");
-// new AudioContext();
-// let audioContext = new (window.AudioContext || window.webkitAudioContext)();
-// const synth = new Tone.Synth().toDestination();
-// synth.triggerAttackRelease("C4", "8n");
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    let g = "Piano Man"
-    console.log(g);
-  }); 
-
-
-// const piano = document.getElementById("piano");
-
-// piano.addEventListener("clickdown", e => {
-//   synth.triggerAttack(e.target.dataset.note);
-// });
-
-// piano.addEventListener("clickup", e => {
-//   synth.triggerRelease;
-// });

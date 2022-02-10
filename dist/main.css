@@ -28,16 +28,13 @@ h1 {
   text-align: center;
 }
 
-div {
-  cursor: pointer;
-}
-
 #piano {
   display: flex;
   justify-content: center;
   text-align: center;
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
 .white {
