@@ -18,7 +18,7 @@ With Piano Player users can:
 - Instructions appear by default in a modal when the page is loaded.
 - Users click to close the modal and continue to the piano.
 
-![welcome](./welcome.png) 
+![welcome](./welcome_revised.png) 
 
 ## Piano
 
