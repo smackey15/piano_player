@@ -2,7 +2,7 @@
 
 Piano Player is a web hosted musical keyboard where users can play fun snippets of simple notes and songs. 
 
-Try it live here! https://smackey15.github.io/piano_player/
+Try it live [here!](https://smackey15.github.io/piano_player/)
 
 ## Features
 
@@ -38,7 +38,7 @@ With Piano Player users can:
 
 ## Technologies, Libraries, APIs
 
-- Tones.js library is used to handle the creation of sounds.
+- Tone.js Web Audio API library is used to handle the creation of sounds.
 - HTML to create the piano framework.
 - CSS to render the piano on the browser.
 - Javscript to provide logic for playing the correct sound when each note is pressed. 
