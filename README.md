@@ -4,6 +4,14 @@ Piano Player is a web hosted musical keyboard where users can play fun snippets 
 
 Try it live [here!](https://smackey15.github.io/piano_player/)
 
+## Technologies, Libraries, APIs
+
+- Tone.js Web Audio API library is used to handle the creation of sounds.
+- HTML to create the piano framework.
+- CSS to render the piano on the browser.
+- Javscript to provide logic for playing the correct sound when each note is pressed. 
+- Webpack to bundle the files. 
+
 ## Features
 
 With Piano Player users can:
@@ -34,15 +42,6 @@ With Piano Player users can:
 - PROBLEM: In this app there can be a tendency towards repitition because one things happens (ie keyup/keydown) and the resulting action has to be applied to every possible note on the piano.  SOLUTION: The keyup function tells the synth object to release/stop making sound when a user has lifted their finger from the key.  Instead of writing "if key "x", then release" for every possible note, I created an array of all possible keys that could be pressed.  Then I said if the key associated with the keyup event is included in that array, then release.  This turned 16 lines of code into two lines!  
 
     ![keyup](./keyup.png) 
-
-
-## Technologies, Libraries, APIs
-
-- Tone.js Web Audio API library is used to handle the creation of sounds.
-- HTML to create the piano framework.
-- CSS to render the piano on the browser.
-- Javscript to provide logic for playing the correct sound when each note is pressed. 
-- Webpack to bundle the files. 
 
 ## Future Implementations
 
