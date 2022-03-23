@@ -6,10 +6,10 @@ Try it live [here!](https://smackey15.github.io/piano_player/)
 
 ## Technologies, Libraries, APIs
 
-- Tone.js Web Audio API library is used to handle the creation of sounds.
+- JavaScript to provide logic for keyboard functioning.
+- Tone.js Web Audio API library to handle the creation of sounds.
 - HTML to create the piano framework.
-- CSS to render the piano on the browser.
-- Javscript to provide logic for playing the correct sound when each note is pressed. 
+- CSS to render the piano on the browser. 
 - Webpack to bundle the files. 
 
 ## Features
