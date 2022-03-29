@@ -106,3 +106,9 @@ input {
   border-radius: 50%;
   background: blueviolet;
 }
+
+.footer {
+  color: blueviolet;
+  font-size: 3px;
+  text-decoration: none;
+}
