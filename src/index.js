@@ -10,12 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // modal fucntionality
   let modal = document.getElementById("myModal");
   
-  let span = document.getElementsByClassName("close")[0];
+  let close = document.getElementsByClassName("close")[0];
+  let open = document.getElementsByClassName("open")[0];
   
   modal.style.display = "block"
   
-  span.onclick = function() {
+  close.onclick = function() {
     modal.style.display = "none";
+  }
+  open.onclick = function() {
+    modal.style.display = "block";
   }
 
   // play piano with mouse
@@ -29,14 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   // play piano with computer keyboard
+  // piano keys turn gray when played with computer keyboard
+
   document.addEventListener("keydown", e => {
 
     if (e.repeat) return;
 
-    if (e.key.toLowerCase() === "a") synth.triggerAttack("A3")
-  
-    if (e.key.toLowerCase() === "w") synth.triggerAttack("A#3")
-  
+    if (e.key.toLowerCase() === "a") {
+      synth.triggerAttack("A3")
+      let node1 = document.getElementById("A")
+      node1.classList.add("active")}
+
+    if (e.key.toLowerCase() === "w") {
+      synth.triggerAttack("A#3")
+      let node2 = document.getElementById("W")
+      node2.classList.add("active")}
+
     if (e.key.toLowerCase() === "s") synth.triggerAttack("B3")
     
     if (e.key.toLowerCase() === "d") synth.triggerAttack("C4")
@@ -65,15 +77,67 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (e.key.toLowerCase() === ";") synth.triggerAttack("C5")
 
-    // key.classList.add("active"); //need to implement 
-    // e.key.style.display = "active"; //need to implement 
-    // piano keys turn gray when played with computer keyboard
   });
 
   document.addEventListener("keyup", e => {
     let keys = ["a", "w", "s", "d", "r", "f", "t", "g", "h", "u", "j", "i", "k", "o", "l", ";"]
-    if (keys.includes(e.key.toLowerCase())) synth.triggerRelease();
+    if (keys.includes(e.key.toLowerCase())) {
+      synth.triggerRelease();
+      let node = document.getElementById(`${e.key.toUpperCase()}`)
+      node.classList.remove("active")
+    }
+    // let node2 = document.getElementById("W")
+    // node2.classList.remove("active")
+
   });
+
+  // const notes = {
+  //   'a': 'A3',
+  //   'w': 'A#3',
+  //   '': ''
+  //   // ...
+  // }
+  // function makeNoteActive(noteId){
+  //   document.querySelector(`[data-note=${noteId}]`).classList.add("active")
+  // }
+  // function deactivateNote(noteId){
+  //   document.querySelector(`[data-note=${noteId}]`).classList.remove("active");
+  //   // const activeKeys = document.getElementsByClassName(".active")
+  //   // activeKeys.forEach(key => key.classList.remove("active"))
+  // }
+  // document.addEventListener('keydown', (e) => {
+  //   const currentNote = notes[e.target.value.toLowerCase()];
+  //   makeNoteActive(currentNote)
+  // })
+  // document.addEventListener('keyup', (e) => {
+  //   const currentNote = notes[e.target.value.toLowerCase()];
+  //   deactivateNote(currentNote)
+  // })
+  
+
+  // const notes = {
+  //   'a': 'A3',
+  //   'w': 'A#3',
+  //   // '': ''
+  //   // ...
+  // }
+  // function makeNoteActive(noteId){
+  //   document.querySelector(`[data-note=${noteId}]`).classList.add("active")
+  // }
+  // function deactivateNote(noteId){
+  //   document.querySelector(`[data-note=${noteId}]`).classList.remove("active");
+  //   // const activeKeys = document.getElementsByClassName(".active")
+  //   // activeKeys.forEach(key => key.classList.remove("active"))
+  // }
+  // document.addEventListener('keydown', (e) => {
+  //   const currentNote = notes[e.key.toLowerCase()];
+  //   makeNoteActive(currentNote)
+  // })
+  // document.addEventListener('keyup', (e) => {
+  //   const currentNote = notes[e.key.toLowerCase()];
+  //   deactivateNote(currentNote)
+  // })
+  
 
 }); 
 

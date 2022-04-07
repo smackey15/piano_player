@@ -68,14 +68,13 @@ h1 {
     align-items: flex-end;
 }
 
-.key:hover {
+.key:active {
     background-color: gray;
 }
 
-// .key.active {
-//     background-color: gray;
-// }
-// need to implement
+.active {
+    background-color: gray;
+}
 
 .slide-container {
     color: blueviolet;
@@ -110,6 +109,13 @@ input {
     height: 25px;
     border-radius: 50%; 
     background: blueviolet;
+  }
+
+  .open-instructions {
+      color: ivory;
+      font-size: 6px;
+      text-align: center;
+      margin-top: 2.75%;
   }
 
   .footer {
