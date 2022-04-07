@@ -41,42 +41,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (e.key.toLowerCase() === "a") {
       synth.triggerAttack("A3")
-      let node1 = document.getElementById("A")
-      node1.classList.add("active")}
+      let node = document.getElementById("A")
+      node.classList.add("active")
+    }
 
     if (e.key.toLowerCase() === "w") {
       synth.triggerAttack("A#3")
-      let node2 = document.getElementById("W")
-      node2.classList.add("active")}
+      let node = document.getElementById("W")
+      node.classList.add("active")
+    }
 
-    if (e.key.toLowerCase() === "s") synth.triggerAttack("B3")
-    
-    if (e.key.toLowerCase() === "d") synth.triggerAttack("C4")
-    
-    if (e.key.toLowerCase() === "r") synth.triggerAttack("C#4")
-    
-    if (e.key.toLowerCase() === "f") synth.triggerAttack("D4")
-    
-    if (e.key.toLowerCase() === "t") synth.triggerAttack("D#4")
-    
-    if (e.key.toLowerCase() === "g") synth.triggerAttack("E4")
-    
-    if (e.key.toLowerCase() === "h") synth.triggerAttack("F4")
-    
-    if (e.key.toLowerCase() === "u") synth.triggerAttack("F#4")
-    
-    if (e.key.toLowerCase() === "j") synth.triggerAttack("G4")
-    
-    if (e.key.toLowerCase() === "i") synth.triggerAttack("G#4")
-    
-    if (e.key.toLowerCase() === "k") synth.triggerAttack("A4")
-    
-    if (e.key.toLowerCase() === "o") synth.triggerAttack("A#4")
-    
-    if (e.key.toLowerCase() === "l") synth.triggerAttack("B4")
-    
-    if (e.key.toLowerCase() === ";") synth.triggerAttack("C5")
+    if (e.key.toLowerCase() === "s") {
+      synth.triggerAttack("B3")
+      let node = document.getElementById("S")
+      node.classList.add("active")
+    }
 
+    if (e.key.toLowerCase() === "d") {
+      synth.triggerAttack("C4")
+      let node = document.getElementById("D")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "r") {
+      synth.triggerAttack("C#4")
+      let node = document.getElementById("R")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "f") {
+      synth.triggerAttack("D4")
+      let node = document.getElementById("F")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "t") {
+      synth.triggerAttack("D#4")
+      let node = document.getElementById("T")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "g") {
+      synth.triggerAttack("E4")
+      let node = document.getElementById("G")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "h") {
+      synth.triggerAttack("F4")
+      let node = document.getElementById("H")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "u") {
+      synth.triggerAttack("F#4")
+      let node = document.getElementById("U")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "j") {
+      synth.triggerAttack("G4")
+      let node = document.getElementById("J")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "i") {
+      synth.triggerAttack("G#4")
+      let node = document.getElementById("I")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "k") {
+      synth.triggerAttack("A4")
+      let node = document.getElementById("K")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "o") {
+      synth.triggerAttack("A#4")
+      let node = document.getElementById("O")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === "l") {
+      synth.triggerAttack("B4")
+      let node = document.getElementById("L")
+      node.classList.add("active")
+    }
+
+    if (e.key.toLowerCase() === ";") {
+      synth.triggerAttack("C5")
+      let node = document.getElementById(";")
+      node.classList.add("active")
+    }
   });
 
   document.addEventListener("keyup", e => {
