@@ -1,12 +1,24 @@
-// Import Tone.js library
 import * as Tone from 'tone'
 
 // Instantiate new synth object, set oscillator type, send output to computer speakers 
-const synth = new Tone.Synth();
+let vol = new Tone.Volume(0).toDestination()
+const synth = new Tone.Synth().connect(vol);
 synth.oscillator.type = "triangle";
-synth.toDestination(); 
+// synth.toDestination(); 
+
+const updateVolume = () => {
+  // debugger
+  let volume = document.getElementById("volume");
+  let level = volume.value
+  vol.volume.value = (level - 100)
+}
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // call updateVolume function when the colume slider is moved bu user
+  let volumeSlider = document.getElementById("volume")
+  volumeSlider.onchange = updateVolume
+  
   // modal fucntionality
   let modal = document.getElementById("myModal");
   
@@ -143,10 +155,17 @@ document.addEventListener("DOMContentLoaded", () => {
       let node = document.getElementById(`${e.key.toUpperCase()}`)
       node.classList.remove("active")
     }
-    // let node2 = document.getElementById("W")
-    // node2.classList.remove("active")
-
   });
+
+
+  //   volume.addEventListener("input", function(e) {
+  //     vol.volume = e.currentTarget.value / 100;
+  // })
+
+  // let vol = new Tone.Volume(-12);
+  // Tone.Destination.chain(vol, );
+
+
 
   // const notes = {
   //   'a': 'A3',
