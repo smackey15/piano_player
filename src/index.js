@@ -1,21 +1,21 @@
 import * as Tone from 'tone'
 
 // Instantiate new synth object, set oscillator type, send output to computer speakers 
-let vol = new Tone.Volume(0).toDestination()
+let vol = new Tone.Volume(110).toDestination()
 const synth = new Tone.Synth().connect(vol);
 synth.oscillator.type = "triangle";
 // synth.toDestination(); 
 
 const updateVolume = () => {
   // debugger
-  let volume = document.getElementById("volume");
-  let level = volume.value
-  vol.volume.value = (level - 100)
+  // let volume = document.getElementById("volume");
+  let level = parseInt(volume.value)
+  vol.volume.value = (level * level)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // call updateVolume function when the colume slider is moved bu user
+  // call updateVolume function when the colume slider is moved by user
   let volumeSlider = document.getElementById("volume")
   volumeSlider.onchange = updateVolume
   
