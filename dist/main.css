@@ -118,6 +118,16 @@ input {
   margin-top: 2.75%;
 }
 
+i {
+  color: blueviolet;
+  padding: 5px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
 .footer {
   color: blueviolet;
   font-size: 3px;

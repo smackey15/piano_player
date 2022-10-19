@@ -1,16 +1,13 @@
 import * as Tone from 'tone'
 
 // Instantiate new synth object, set oscillator type, send output to computer speakers 
-let vol = new Tone.Volume(110).toDestination()
+let vol = new Tone.Volume(0).toDestination()
 const synth = new Tone.Synth().connect(vol);
 synth.oscillator.type = "triangle";
-// synth.toDestination(); 
 
 const updateVolume = () => {
-  // debugger
-  // let volume = document.getElementById("volume");
   let level = parseInt(volume.value)
-  vol.volume.value = (level * level)
+  vol.volume.value = (level - 50)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -156,64 +153,5 @@ document.addEventListener("DOMContentLoaded", () => {
       node.classList.remove("active")
     }
   });
-
-
-  //   volume.addEventListener("input", function(e) {
-  //     vol.volume = e.currentTarget.value / 100;
-  // })
-
-  // let vol = new Tone.Volume(-12);
-  // Tone.Destination.chain(vol, );
-
-
-
-  // const notes = {
-  //   'a': 'A3',
-  //   'w': 'A#3',
-  //   '': ''
-  //   // ...
-  // }
-  // function makeNoteActive(noteId){
-  //   document.querySelector(`[data-note=${noteId}]`).classList.add("active")
-  // }
-  // function deactivateNote(noteId){
-  //   document.querySelector(`[data-note=${noteId}]`).classList.remove("active");
-  //   // const activeKeys = document.getElementsByClassName(".active")
-  //   // activeKeys.forEach(key => key.classList.remove("active"))
-  // }
-  // document.addEventListener('keydown', (e) => {
-  //   const currentNote = notes[e.target.value.toLowerCase()];
-  //   makeNoteActive(currentNote)
-  // })
-  // document.addEventListener('keyup', (e) => {
-  //   const currentNote = notes[e.target.value.toLowerCase()];
-  //   deactivateNote(currentNote)
-  // })
-  
-
-  // const notes = {
-  //   'a': 'A3',
-  //   'w': 'A#3',
-  //   // '': ''
-  //   // ...
-  // }
-  // function makeNoteActive(noteId){
-  //   document.querySelector(`[data-note=${noteId}]`).classList.add("active")
-  // }
-  // function deactivateNote(noteId){
-  //   document.querySelector(`[data-note=${noteId}]`).classList.remove("active");
-  //   // const activeKeys = document.getElementsByClassName(".active")
-  //   // activeKeys.forEach(key => key.classList.remove("active"))
-  // }
-  // document.addEventListener('keydown', (e) => {
-  //   const currentNote = notes[e.key.toLowerCase()];
-  //   makeNoteActive(currentNote)
-  // })
-  // document.addEventListener('keyup', (e) => {
-  //   const currentNote = notes[e.key.toLowerCase()];
-  //   deactivateNote(currentNote)
-  // })
-  
-
 }); 
 
